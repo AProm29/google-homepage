@@ -1,0 +1,1 @@
+The purpose of this project is to develop a webpage using skills learned in HTML and CSS from the Odin Project
