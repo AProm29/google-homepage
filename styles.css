@@ -1,40 +1,68 @@
 html, body {
     margin: 0;
-    height: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
 }
 
-a {
+header {
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+}
+
+#navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#navbar div{
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+}
+
+#navbar div:nth-child(1) {
+    justify-content: start;
+}
+
+#navbar div:nth-child(2) {
+    justify-content: flex-end;
+    text-align: right;
+    right: 0;
+}
+
+#navbar div a {
+    padding: 5px;
     text-decoration: none;
+    white-space: normal;
+    color: #3b3b3b;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-#topnav-right {
-    float:right;
-}
-
-#navbar {
-   
-    margin-top: 15px;
-}
-
-#navbar a {
-    margin-right: 20px;
-}
-
-#navbar a.topimage {
-    width: 20px;
-    height:20px;
-    background: red;
+#profile {
+    background: url("happy_dog.jpg");
+    height: 30px;
+    width: 30px;
+    background-size: cover;
     border-radius: 50%;
-   
+    background-position: -1px;
+    cursor: pointer;
+}
+#profile div {
+    padding: 5px;
+    line-height: 10px;
 }
 
-#topnav-right a.topapps {
- 
-}
 
 #middle {
     flex-grow: 1;

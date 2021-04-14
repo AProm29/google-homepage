@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,39 +11,69 @@
 </head>
 
 <body>
-    
-    <div id="navbar">
-        <a class="leftlink">About</a>
-        <a class="leftlink">Store</a>
-         <div id="topnav-right">
-            <a class="toplink">Gmail</a>
-            <a class="toplink">Images</a>
-            <a class="topapps"><i class="material-icons">apps</i></a>
-            <a class="topimage">Profile</a>
-        </div>  
+    <header>
+        <div id="navbar">
+            <a class="leftlink" href="#">About</a>
+            <a class="leftlink" href="#">Store</a>
+            <div>
+                <a class="toplink" href="#">Gmail</a>
+                <a class="toplink" href="#">Images</a>
+                <a id="topapps" href="#"><span class="material-icons" onclick="myMenu()">apps</span></a>
+                <a id="profile" href="#"></a>
+            </div>  
         </div>
-
+        <div id="apps" class="apps" style="display: none;">
+            <a href="#">
+                <div class="second sprite"><span class="material-icons">
+                    account_circle</span></div>
+                <div class="icon_text">Account</div>
+            </a>            
+            <a href="#">
+                <div class="first sprite"><span class="material-icons">
+                    email</span></div>
+                <div class="icon_text">Email</div>
+            </a>
+            <a href="#">
+                <div class="third sprite"><span class="material-icons">
+                    place</span></div>
+                <div class="icon_text">Maps</div>
+            </a>
+            <a href="#">
+                <div class="fourth sprite"><span class="material-icons">
+                    today</span></div>
+                <div class="icon_text">Calendar</div>
+            </a>
+            <a href="#">
+                <div class="fifth sprite"><span class="material-icons">
+                    smart_display</span></div>
+                <div class="icon_text">Youtube</div>
+            </a>
+            <a href="#">
+                <div class="sixth sprite"><span class="material-icons">
+                    feed</span></div>
+                <div class="icon_text">News</div>
+            </a>
+        </div>
+    </header>
+    
     <div id="middle">
         <div id="logo">
             <img src="googlelogo_color_272x92dp.png" alt="Google Logo">
         </div>
 
-    
-
         <div id="searchbarContainer">
-            <div id="search"><i class="material-icons">search</i></div>
+            <div id="search"><span class="material-icons">search</span></div>
                 <input id="searchbar" type="text">
-            <div id="voice"><i class="material-icons">mic</i></div>
+            <div id="voice"><span class="material-icons">mic</span></div>
         </div>
 
         <div id="buttons">
             <div class="button">Google Search</div>
             <div class="button">I'm Feeling Lucky</div>
         </div>
+
         <div id="links">Google offered in: <a href="">Francais</a></div>
     </div>
-
-    
 
     <div id="footer">
         <div id="bottomnavbar">
@@ -58,8 +87,21 @@
 
     </div>
 </body> 
-
+<script>
+    function    myMenu() {
+        var x = document.getElementById("apps");
+        if (x.style.display === "none") {
+            x.style.display = "flex";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
 
 
 
 </html>
+
+
+
+
